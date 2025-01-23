@@ -6,8 +6,6 @@ IFS=$'\n' read -d '' -r -a dependencies < ./resources/installer-dependencies.txt
 # Format dependencies into array; keys are package names, values are package types
 # ex: the line 'arch git' indicates package 'git' from official arch repositories
 
-
-
 # Isolate missing packages
 missingPackages=()
 for package in "${dependencies[@]}"; do
