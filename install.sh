@@ -33,16 +33,6 @@ missingPackages+="@@ EOF"
 
 # Prompt user to install missing dependencies
 if [[ ${#missingPackages[@]} > 0 ]]; then
-    printf "To run the installer, you need the following packages:\n"
-
-    # Loop through dependencies and display them
-    for package, type in ${missingPackages[@]}; do
-        printf "%20s%10s\n" "$type" "$package"
-    done
-
-    # Get user confirmation
-    read -p "Install above packages and continue? (Y/N): " confirm && \
-        [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
     # Install dependencies
     needSudo=1
