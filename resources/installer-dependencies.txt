@@ -1,0 +1,7 @@
+@@ arch base-devel
+@@ arch git
+@@ makepkg paru https://aur.archlinux.org/paru.git -si
+@@ arch stow
+@@ arch python
+@@ pip python-questionary
+@@ pip python-rich
